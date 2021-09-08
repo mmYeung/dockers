@@ -8,7 +8,7 @@ RUN wget https://github.com/Illumina/Pisces/archive/refs/tags/v${PISCES_VERSION}
 
 RUN tar -xzvf v${PISCES_VERSION}.tar.gz
 
-RUN cd Pisces-${PISCES_VERSION}/binaries/${PISCES_VERSION} && tar -xzf Pisces_${PISCES_VERSION}.tar.gz && tar -xzf Hygea_${PISCES_VERSION}.tar.gz && tar -xzf Stitcher_${PISCES_VERSION}.tar.gz && tar -xzf VariantQualityRecalibration_${PISCES_VERSION}.tar.gz
+RUN cd Pisces-${PISCES_VERSION}/binaries/${PISCES_VERSION} && tar -xzf Pisces_${PISCES_VERSION}.tar.gz && tar -xzf Hygea_${PISCES_VERSION}.tar.gz && tar -xzf Stitcher_${PISCES_VERSION}.tar.gz && tar -xzf Gemini_${PISCES_VERSION}.tar.gz && tar -xzf VariantQualityRecalibration_${PISCES_VERSION}.tar.gz
 
 RUN mkdir /app/Pisces_v${PISCES_VERSION}
 
