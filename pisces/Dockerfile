@@ -18,7 +18,7 @@ RUN mv Pisces-${PISCES_VERSION}/binaries/${PISCES_VERSION}/Hygea_${PISCES_VERSIO
 
 RUN mv Pisces-${PISCES_VERSION}/binaries/${PISCES_VERSION}/Stitcher_${PISCES_VERSION}/* /app/Pisces_v${PISCES_VERSION}
 
-RUN mv Pisces-${PISCES_VERSION}/binaries/${PISCES_VERSION}/Gemini_${PISCES_VERSION}/* /app.Pisces_v${PISCES_VERSION}
+RUN mv Pisces-${PISCES_VERSION}/binaries/${PISCES_VERSION}/Gemini_${PISCES_VERSION}/* /app/Pisces_v${PISCES_VERSION}
 
 RUN mv Pisces-${PISCES_VERSION}/binaries/${PISCES_VERSION}/VariantQualityRecalibration_${PISCES_VERSION}/* /app/Pisces_v${PISCES_VERSION}
 
