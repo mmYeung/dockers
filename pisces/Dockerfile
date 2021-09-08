@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.1-sdk AS build
+FROM mcr.microsoft.com/dotnet/nightly/sdk:3.1 AS build
 
 WORKDIR /app
 
