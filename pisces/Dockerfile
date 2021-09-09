@@ -28,4 +28,4 @@ RUN rm -r Pisces-${PISCES_VERSION} && rm v${PISCES_VERSION}.tar.gz
 
 WORKDIR /app/Pisces_v${PISCES_VERSION}
 
-ENTRYPOINT [ "dotnet" ]
+CMD [ "/bin/bash" ]
