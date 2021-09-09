@@ -2,9 +2,9 @@ FROM mcr.microsoft.com/dotnet/sdk:2.1 AS build
 
 WORKDIR /app
 
-ENV PISCES_VERSION=5.2.10.49
+ENV PISCES_VERSION=5.3.0.0
 
-RUN wget https://github.com/Illumina/Pisces/archive/refs/tags/v${PISCES_VERSION}.tar.gz
+RUN wget https://github.com/tamsen/Pisces/archive/refs/tags/v${PISCES_VERSION}.tar.gz
 
 RUN tar -xzvf v${PISCES_VERSION}.tar.gz
 
