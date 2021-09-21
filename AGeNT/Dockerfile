@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 WORKDIR /app
 
-ENV AGENT_VERSION=2.0.2
+ENV AGENT_VERSION=2.0.5
 
 ## Download required Java
 RUN apt-get update && apt-get install -y \
