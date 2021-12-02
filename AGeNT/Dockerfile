@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 WORKDIR /app
 
-ENV AGENT_VERSION=2.0.5
+ENV AGENT_VERSION=2.0.2
 
 ## Download required Java
 RUN apt-get update && apt-get install -y \
@@ -23,6 +23,8 @@ RUN unzip AGeNT_${AGENT_VERSION}.zip && \
 # ENV LIB=/app/agent_${AGENT_VERSION}/lib:$LIB
 
 # ENV CLASSPATH=/app/agent_${AGENT_VERSION}/lib/Agent.jar:/app/agent_${AGENT_VERSION}/lib/junit.jar:/app/agent_${AGENT_VERSION}/lib/locatit.jar:/app/agent_${AGENT_VERSION}/lib/trimmer.jar:$CLASSPATH
+
+ENV PATH=/usr/bin/java:$PATH
 
 WORKDIR /app/agent_${AGENT_VERSION}/lib
 
