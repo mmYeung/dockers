@@ -22,9 +22,9 @@ RUN unzip AGeNT_${AGENT_VERSION}.zip && \
 
 # ENV LIB=/app/agent_${AGENT_VERSION}/lib:$LIB
 
-# ENV CLASSPATH=/app/agent_${AGENT_VERSION}/lib/Agent.jar:/app/agent_${AGENT_VERSION}/lib/junit.jar:/app/agent_${AGENT_VERSION}/lib/locatit.jar:/app/agent_${AGENT_VERSION}/lib/trimmer.jar:$CLASSPATH
+# ENV CLASSPATH=/app/agent_${AGENT_VERSION}/lib/Agent.jar;/app/agent_${AGENT_VERSION}/lib/junit.jar;/app/agent_${AGENT_VERSION}/lib/locatit.jar;/app/agent_${AGENT_VERSION}/lib/trimmer.jar;$CLASSPATH
 
-ENV PATH=/usr/bin/java:$PATH
+ENV PATH /usr/bin/java:/app/agent_${AGENT_VERSION}/lib:$PATH
 
 WORKDIR /app/agent_${AGENT_VERSION}/lib
 
