@@ -28,4 +28,4 @@ ENV PATH=/usr/bin/java:$PATH
 
 WORKDIR /app/agent_${AGENT_VERSION}/lib
 
-CMD [ "java -jar " ]
+ENTRYPOINT [ "java", "-jar" ]
