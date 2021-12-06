@@ -24,8 +24,8 @@ RUN unzip AGeNT_${AGENT_VERSION}.zip && \
 
 # ENV CLASSPATH=/app/agent_${AGENT_VERSION}/lib/Agent.jar;/app/agent_${AGENT_VERSION}/lib/junit.jar;/app/agent_${AGENT_VERSION}/lib/locatit.jar;/app/agent_${AGENT_VERSION}/lib/trimmer.jar;$CLASSPATH
 
-ENV PATH /usr/bin/java:/app/agent_${AGENT_VERSION}/lib:$PATH
+# ENV PATH /usr/bin/java:/app/agent_${AGENT_VERSION}/lib:$PATH
 
-WORKDIR /app/agent_${AGENT_VERSION}/lib
+# WORKDIR /app/agent_${AGENT_VERSION}/lib
 
-ENTRYPOINT [ "java", "-jar" ]
+CMD ["java", "-version" ]
