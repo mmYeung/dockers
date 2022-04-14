@@ -1,4 +1,5 @@
-FROM mcr.microsoft.com/dotnet/sdk:2.1 AS build
+### Need to base on samtools docker as samtools executable required for Gemini
+FROM biocontainers/samtools:1.3 as build
 
 WORKDIR /app
 
