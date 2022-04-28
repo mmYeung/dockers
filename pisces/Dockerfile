@@ -27,6 +27,8 @@ RUN tar -xzvf pisces_all_${PISCES_VERSION}.tar.gz && mv pisces_all /app/Pisces_v
 
 # RUN rm -r Pisces-${PISCES_VERSION} && rm v${PISCES_VERSION}.tar.gz
 
+RUN chmod 777 /app/Pisces_v${PISCES_VERSION}/*
+
 WORKDIR /app/Pisces_v${PISCES_VERSION}
 
 ENV PATH="/app/Pisces_v${PISCES_VERSION}:$PATH"
