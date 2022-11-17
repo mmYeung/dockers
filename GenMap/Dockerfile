@@ -1,5 +1,28 @@
-FROM continuumio/miniconda3:4.12.0
+FROM amd64/ubuntu:22.10
 
-RUN conda install -c bioconda genmap=1.3.0
+RUN apt-get update && apt-get install -y \
+    wget \
+    unzip \
+    cmake \
+    make \
+    gcc \
+    clang \
+    libseqan2-dev \
+    git \
+    libomp-dev
 
-CMD "map"
+WORKDIR /opt
+
+RUN wget https://github.com/cpockrandt/genmap/archive/refs/tags/genmap-v1.3.0.zip && unzip genmap-v1.3.0.zip
+
+RUN mv genmap-genmap-v1.3.0 genmap_v1.3.0
+
+WORKDIR /opt/genmap_v1.3.0
+
+RUN cmake . -DCMAKE_BUILD_TYPE=Release
+
+RUN make genmap
+
+RUN make install
+
+ENTRYPOINT ["genmap"]
