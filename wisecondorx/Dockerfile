@@ -2,21 +2,19 @@ FROM --platform=linux/amd64 ubuntu:22.04
 
 WORKDIR /opt
 
-
-
 ## Install required packages for python installation
 RUN apt-get update && apt-get install -y wget \
-    && git \
-    && build-essential \
-    && zlib1g-dev \
-    && libncurses5-dev \
-    && libgdbm-dev \
-    && libnss3-dev \
-    && libssl-dev \
-    && libreadline-dev \
-    && libffi-dev \
-    && libsqlite3-dev \
-    && libbz2-dev
+    git \
+    build-essential \
+    zlib1g-dev \
+    libncurses5-dev \
+    libgdbm-dev \
+    libnss3-dev \
+    libssl-dev \
+    libreadline-dev \
+    libffi-dev \
+    libsqlite3-dev \
+    libbz2-dev
 
 ## Install python
 ENV PYTHON_VERSION=3.6.8
